@@ -45,7 +45,34 @@
             <span class="gota" style="--i:13"></span>
             <span class="gota" style="--i:14"></span>
         </section>
+
+
+        <div class="Lastajs">
+
+
+
+        <div class="imgHidden">
+            <div class="dragArea">
+                <h3>Apuntes</h3><br>
+                <div>
+                <ul class="galeryArea" >
+                    <li id="cambiar" onclick="imgOver1()"><span class="title-img">Derivadas</span><span class="mvm-img"><img class="imgScroll imgdly" src="imgEjem/tabla-de-derivadas.png"></span></li>
+                    <span class="borde"></span>
+                    <li onclick="imgOver2()"><span class="title-img">Logaritmos</span><span class="mvm-img"><img class="imgScroll" src="imgEjem/exponente+base+exponente+base+OPERACIÓN+LOGARITMO.jpg" alt="derivadas"></span></li>
+                    <span class="borde"></span>
+                    <li onclick="imgOver3()"><span class="title-img">Vectores</span><span class="mvm-img"><img class="imgScroll" src="imgEjem/Vectores-teoria-ejemplos-y-ejercicios-resueltos.-1-1024x576.png"></span></li>
+                    <span class="borde"></span>
+                </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
         <div class="calendar-ctn">
+
+
             <div class="nav-cont">
                 <ul class="first-nav">
                     <i class="fa-brands fa-canadian-maple-leaf"></i>
@@ -59,12 +86,15 @@
                     <p><span class="font-xf">Bienvenido aquí puedes </span><i class="textop">Grabar audios</i></p>
                     <p><span class="font-xf">Bienvenido aquí puedes </span><i class="textop">Poner fotos</i></p>
                     <p><span class="font-xf">Bienvenido aquí puedes </span><i class="textop">Poner imagenes</i></p>
-                    <p><span class="font-xf">Bienvenido aquí puedes </span><i class="textop">Hacer examenes de estudio</i></p>
+                    <p><span class="font-xf">Bienvenido aquí puedes </span><br><i class="textop">Hacer examenes de estudio</i></p>
                 </div>
-                <ul class="snd-nav"></i></li>
+                <ul class="snd-nav">
                     <li class="cln-icn"><i class="fa-regular fa-calendar"><p class="cld-date">27</p></i></li>
                 </ul>
             </div>
+
+
+
             <div class="grid-cnt">
 
                 <div class="Day">
@@ -124,12 +154,16 @@
                         
                     </ul>
                 </div>
+            </div>
         </div>
+    </div>
 
+<!--aHola-->
 
 
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script type="text/javascript">
 
 
@@ -162,6 +196,76 @@
     cursorChar: '|', // Caracter para el cursor
     contentType: 'html', // 'html' o 'null' para texto sin formato
 });
+
+            ////////////////////////////////////////////////////////
+
+            window.sr = ScrollReveal();
+            sr.reveal('.nav-menu', {
+                duration: 2000,
+                origin: 'rigth',
+                distance: '200px'
+              });
+              sr.reveal('.logo', {
+                duration: 3000,
+                rotate: {
+                    x:1,
+                    y:100,
+                }
+              });
+
+
+              //////////////////////////////////////////////////
+
+
+              ScrollReveal().reveal()
+            window.sr = ScrollReveal();
+              sr.reveal('.imgScroll', {
+                duration: 3000,
+                origin: 'left',
+                distance: '100px'
+              });
+              sr.reveal('.imgHidden', {
+                duration: 3000,
+                origin: 'left',
+                distance: '100px'
+              });
+
+
+              /////////////////////////////////////////////
+
+              function imgOver1() {
+                  // body...
+                  Swal.fire({
+                      imageUrl: 'imgEjem/tabla-de-derivadas.png',
+                      imageWidth: 700,
+                      imageHeight: 500,
+                      width:'60%',
+                      imageAlt: 'Custom image',
+                    })
+              }
+              function imgOver2() {
+                  // body...
+                  Swal.fire({
+                      imageUrl: 'imgEjem/exponente+base+exponente+base+OPERACIÓN+LOGARITMO.jpg',
+                      imageWidth: 700,
+                      imageHeight: 500,
+                      width:'60%',
+                      imageAlt: 'Custom image',
+                    })
+              }
+              function imgOver3() {
+                  // body...
+                  Swal.fire({
+                      imageUrl: 'imgEjem/Vectores-teoria-ejemplos-y-ejercicios-resueltos.-1-1024x576.png',
+                      imageWidth: 700,
+                      imageHeight: 500,
+                      width:'60%',
+                      imageAlt: 'Custom image',
+                    })
+              }
+              
+
+
         </script>
         <script src="https://kit.fontawesome.com/a1580b1b63.js" crossorigin="anonymous"></script>
     </body>

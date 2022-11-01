@@ -5,8 +5,6 @@
 }
 body{
 	background: #000;
-	display: flex;
-	justify-content: center;
 }
 
 
@@ -73,6 +71,82 @@ header{
 		background-color: #478;
 		transition: 0.5s;
 	}
+
+
+
+
+
+.btn-ejemp{
+	padding: 20px;
+	background: linear-gradient(to right,#16222A,#3A6073); 	
+}
+.exmCnt{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.frt-line{
+	margin-top: 16px;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-around;
+	border-radius: 20px;
+	width: 70%;
+	background: #123;
+	color: #999;
+}
+.frt-line::before{
+	content: '-';
+}
+
+
+.Ftitle{
+	margin-top: 60px;
+	padding: 10px;
+	background: #545667;
+	color: #000;
+	text-align: center;
+}
+
+
+.Ftitle p{
+	padding: 10px;
+}
+.Txt-Undl{
+	text-decoration: underline;
+	text-transform: capitalize;
+}
+
+.dvdLin{
+	border-bottom: 2px solid #546a;
+	width: 90%;
+	height: 1pc;
+}
+
+button{
+	background: #876225;
+	padding: 6px;
+	cursor: pointer;
+	border: 0;
+	font-size: 10px;
+	text-transform: uppercase;
+	-webkit-box-shadow: 8px 11px 17px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 8px 11px 17px -6px rgba(0,0,0,0.75);
+box-shadow: 8px 11px 17px -6px rgba(0,0,0,0.75);
+border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 768px) {

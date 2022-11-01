@@ -104,11 +104,13 @@
 				</ul>
 			</div>
 			<div class="butons-cnt">
-				<button class="send"><a href="Calendario3.html">Guardar</a></button>
+				<button class="send" onclick="buttonx()"><a href="Calendario3.html">Guardar</a></button>
 			</div>
 		</form>
 
 	<script src="https://kit.fontawesome.com/a1580b1b63.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 	<script type="text/javascript">
 		let titulo = document.querySelector(".word-act")
         
@@ -153,6 +155,33 @@
 
 
         ///////////////////////////
+
+
+        function buttonx() {
+        	// body...
+        	let timerInterval
+					Swal.fire({
+					  title: 'Auto close alert!',
+					  html: 'I will close in <b></b> milliseconds.',
+					  timer: 2000,
+					  timerProgressBar: true,
+					  didOpen: () => {
+					    Swal.showLoading()
+					    const b = Swal.getHtmlContainer().querySelector('b')
+					    timerInterval = setInterval(() => {
+					      b.textContent = Swal.getTimerLeft()
+					    }, 100)
+					  },
+					  willClose: () => {
+					    clearInterval(timerInterval)
+					  }
+					}).then((result) => {
+					  /* Read more about handling dismissals below */
+					  if (result.dismiss === Swal.DismissReason.timer) {
+					    console.log('I was closed by the timer')
+					  }
+					})
+        }
 
 
 

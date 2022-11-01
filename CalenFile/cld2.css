@@ -189,6 +189,9 @@ textarea{
 	margin-left: 20px;
 	max-height: 200px;	
 	max-width: 100%;
+	min-width: 100%;
+	border-radius: 10px;
+	padding: 2px;
 }
 .Inv-cnt{
 	padding: 14px;

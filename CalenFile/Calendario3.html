@@ -46,6 +46,33 @@
             <span class="gota" style="--i:13"></span>
             <span class="gota" style="--i:14"></span>
         </section>
+
+
+
+        <div class="Lastajs">
+
+
+        <div class="imgHidden">
+            <div class="dragArea">
+                <h3>Apuntes</h3><br>
+                <div>
+                <ul class="galeryArea" >
+                    <li id="cambiar" onclick="imgOver1()"><span class="title-img">Derivadas</span><span class="mvm-img"><img class="imgScroll imgdly" src="../imgEjem/tabla-de-derivadas.png"></span></li>
+                    <span class="borde"></span>
+                    <li onclick="imgOver2()"><span class="title-img">Logaritmos</span><span class="mvm-img"><img class="imgScroll" src="../imgEjem/exponente+base+exponente+base+OPERACIÓN+LOGARITMO.jpg" alt="derivadas"></span></li>
+                    <span class="borde"></span>
+                    <li onclick="imgOver3()"><span class="title-img">Vectores</span><span class="mvm-img"><img class="imgScroll" src="../imgEjem/Vectores-teoria-ejemplos-y-ejercicios-resueltos.-1-1024x576.png"></span></li>
+                    <span class="borde"></span>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
         <div class="calendar-ctn">
             <div class="nav-cont">
                 <ul class="first-nav">
@@ -107,7 +134,7 @@
                         <li>21</li>
                         <li>22</li>
                         <li>23</li>
-                        <li>24</li>
+                        <li style="text-decoration: underline;">24</li>
                         <li>25</li>
                         <li>26</li>
                         <li>27</li>
@@ -134,6 +161,7 @@
                     </ul>
                 </div>
             </div>
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -192,6 +220,40 @@
           icon: 'success',
           title: 'Tu horario se guardó correctamente'
         })
+
+
+        //////////////////////////////imgReveal
+
+        function imgOver1() {
+                  // body...
+                  Swal.fire({
+                      imageUrl: '../imgEjem/tabla-de-derivadas.png',
+                      imageWidth: 700,
+                      imageHeight: 500,
+                      width:'60%',
+                      imageAlt: 'Custom image',
+                    })
+              }
+              function imgOver2() {
+                  // body...
+                  Swal.fire({
+                      imageUrl: '../imgEjem/exponente+base+exponente+base+OPERACIÓN+LOGARITMO.jpg',
+                      imageWidth: 700,
+                      imageHeight: 500,
+                      width:'60%',
+                      imageAlt: 'Custom image',
+                    })
+              }
+              function imgOver3() {
+                  // body...
+                  Swal.fire({
+                      imageUrl: '../imgEjem/Vectores-teoria-ejemplos-y-ejercicios-resueltos.-1-1024x576.png',
+                      imageWidth: 700,
+                      imageHeight: 500,
+                      width:'60%',
+                      imageAlt: 'Custom image',
+                    })
+              }
 
         </script>
 

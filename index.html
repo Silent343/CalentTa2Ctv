@@ -32,31 +32,38 @@
 
 
 
-        <div class="table-cnt">
+        <div class="table-cnt" id="tableroUn">
             <div class="Addbtn-cnt">
                 <h1>Tablero</h1><br>
-                <span><button class="addThng">Agregar</button></span>
+                <span>
+                    <button class="addThng" onclick="addFile()">Agregar</button></span>
             </div>
             <div class="dragArea">
-                <h3>Apuntes</h3><br>
                 <div>
-                <ul class="galeryArea">
-                    <li><span class="title-img">Derivadas</span><img src="imgEjem/tabla-de-derivadas.png"></li>
+                <h5>Jueves 24</h5>
+                <ul class="galeryArea" >
+                    <li><span class="title-img">Derivadas</span><img class="imgScroll imgdly" src="imgEjem/tabla-de-derivadas.png"></li>
                     <span class="borde"></span>
-                    <li><span class="title-img">Logaritmos</span><img src="imgEjem/exponente+base+exponente+base+OPERACIÓN+LOGARITMO.jpg" alt="derivadas"></li>
+                    <li><span class="title-img">Logaritmos</span><img class="imgScroll" src="imgEjem/exponente+base+exponente+base+OPERACIÓN+LOGARITMO.jpg" alt="derivadas"></li>
                     <span class="borde"></span>
-                    <li><span class="title-img">Vectores</span><img src="imgEjem/Vectores-teoria-ejemplos-y-ejercicios-resueltos.-1-1024x576.png"></li>
+                    <li><span class="title-img">Vectores</span><img class="imgScroll" src="imgEjem/Vectores-teoria-ejemplos-y-ejercicios-resueltos.-1-1024x576.png"></li>
                     <span class="borde"></span>
                 </ul>
                 </div>
             </div>
-        </div><br>
+        </div>
         
+
+
+
 
 
 
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="https://kit.fontawesome.com/a1580b1b63.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         <script type="text/javascript">
         	const navMenu = document.querySelector(".nav-menu")
             const navToggle = document.querySelector(".nav-toggle")
@@ -66,6 +73,60 @@
             }) 
 
             /////////////////////
+
+            ScrollReveal().reveal()
+            window.sr = ScrollReveal();
+              sr.reveal('.imgScroll', {
+                duration: 3000,
+                origin: 'bottom',
+                distance: '100px'
+              });
+              sr.reveal('.imgdly', {
+                delay: 500,
+              });
+              sr.reveal('.nav-menu', {
+                duration: 2000,
+                origin: 'rigth',
+                distance: '200px'
+              });
+              sr.reveal('.logo', {
+                duration: 3000,
+                rotate: {
+                    x:1,
+                    y:100,
+                }
+              });
+
+
+
+              //////////////////////////
+
+
+              function addFile() {
+
+             (async () => {   
+            // body...
+            const { value: file } = await Swal.fire({
+              title: 'Sube la imagen',
+              input: 'file',
+              inputAttributes: {
+                'accept': 'image/*',
+                'aria-label': 'Upload your profile picture'
+              }
+            })
+
+            if (file) {
+              const reader = new FileReader()
+              reader.onload = (e) => {
+                Swal.fire({
+                  title: 'Your uploaded picture',
+                  imageUrl: e.target.result,
+                  imageAlt: 'The uploaded picture'
+                })
+              }
+              reader.readAsDataURL(file)
+            }})()
+        }
 
         </script>
 </body>
