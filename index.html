@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tablero</title> 
+    <link rel="stylesheet" type="text/css" href="tablero.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header class="header">
+            <nav class="navCnt">
+                <a class="logo" href="#">Logo</a>
+                <button class="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li class="navElemt">
+                        <a class="navLink " href="Tablero.html">Tablero</a>
+                    </li>
+                    <li class="navElemt">
+                        <a class="navLink " href="project.html">Calendario</a>
+                    </li>
+                    <li class="navElemt">
+                        <a class="navLink " href="examen.html">Exámenes</a>
+                    </li>
+                    <li class="navElemt">
+                        <a class="navLink navLink_active" href="cuaderno.html">Cuaderno</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <div class="table-cnt">
+            <div class="Addbtn-cnt">
+                <h1>Tablero</h1><br>
+                <span><button class="addThng">Agregar</button></span>
+            </div>
+            <div class="dragArea">
+                <h3>Apuntes</h3><br>
+                <div>
+                <ul class="galeryArea">
+                    <li><span class="title-img">Derivadas</span><img src="imgEjem/tabla-de-derivadas.png"></li>
+                    <span class="borde"></span>
+                    <li><span class="title-img">Logaritmos</span><img src="imgEjem/exponente+base+exponente+base+OPERACIÓN+LOGARITMO.jpg" alt="derivadas"></li>
+                    <span class="borde"></span>
+                    <li><span class="title-img">Vectores</span><img src="imgEjem/Vectores-teoria-ejemplos-y-ejercicios-resueltos.-1-1024x576.png"></li>
+                    <span class="borde"></span>
+                </ul>
+                </div>
+            </div>
+        </div><br>
+        
+
+
+
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://kit.fontawesome.com/a1580b1b63.js" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        	const navMenu = document.querySelector(".nav-menu")
+            const navToggle = document.querySelector(".nav-toggle")
+
+            navToggle.addEventListener("click", () => {
+                navMenu.classList.toggle("navVisible")
+            }) 
+
+            /////////////////////
+
+        </script>
+</body>
+</html>

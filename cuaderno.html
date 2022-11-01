@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cuaderno</title> 
+    <link rel="stylesheet" type="text/css" href="cdr.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header class="header">
+            <nav class="navCnt">
+                <a class="logo" href="#">Logo</a>
+                <button class="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li class="navElemt">
+                        <a class="navLink " href="Tablero.html">Tablero</a>
+                    </li>
+                    <li class="navElemt">
+                        <a class="navLink " href="project.html">Calendario</a>
+                    </li>
+                    <li class="navElemt">
+                        <a class="navLink " href="examen.html">Exámenes</a>
+                    </li>
+                    <li class="navElemt">
+                        <a class="navLink navLink_active" href="cuaderno.html">Cuaderno</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://kit.fontawesome.com/a1580b1b63.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script type="text/javascript">
+
+            ////////////bars funtion
+
+
+        	const navMenu = document.querySelector(".nav-menu")
+            const navToggle = document.querySelector(".nav-toggle")
+
+            navToggle.addEventListener("click", () => {
+                navMenu.classList.toggle("navVisible")
+            }) 
+
+            ///////////////alert
+
+
+            Swal.fire({
+                title: 'Ojo!',
+                text: 'Pagina en desarrollo',
+                icon:'warning',
+                timer: 5500,
+                timerProgressBar: true,
+            })
+
+
+
+        </script>
+</body>
+</html>
