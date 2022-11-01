@@ -441,6 +441,7 @@ a{
 
 	.navCnt a{
 		color: #fff;
+		line-height: 50px;
 	}
 
 	.nav-toggle{
@@ -450,7 +451,7 @@ a{
 		border: none;
 		padding: 0 20px;
 		font-size: 25px;
-	    line-height: 30px;
+	    line-height: 50px;
 		display: block;
 	}
 
@@ -463,11 +464,8 @@ a{
 
 	.calendar-ctn
 {
-	position: absolute;
 	padding: 5px;
 	width: 100%;
-	top: 4pc;
-	height: 36pc;
 	background: #565d;
 	border-radius: 10px;
 }
