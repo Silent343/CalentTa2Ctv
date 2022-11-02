@@ -21,13 +21,15 @@ header{
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 50px;
+	height: 70px;	
+	z-index: 10;
 }
 
 .navCnt{
 	display: flex;
 	justify-content: space-around;
 	line-height: 50px;
+
 }
 
 .nav-menu{
@@ -37,7 +39,7 @@ header{
 
 .navElemt{
 	margin: 0 20px;
-	line-height: 50px;
+	line-height: 70px;
 	width: max-content;
 	text-transform: uppercase;
 }
@@ -45,7 +47,7 @@ header{
 .logo{
 	font-size: 25px;
 	font-weight: bold;
-	line-height: 50px;
+	line-height: 70px;
 }
 
 .navCnt a{
@@ -146,6 +148,7 @@ header{
 .waves-cnt{
 	width: 100%;
 	transform: rotate(180deg);
+	z-index: -10;
 }
 
 .waves{
@@ -182,4 +185,12 @@ header{
   100% { 
     transform: translate3d(85px,0,0);
   }
+}
+
+.navCnt img{
+    position: absolute;
+    top: 10px;
+    left: 13%;
+    width: 50px;
+    height: 50px;
 }

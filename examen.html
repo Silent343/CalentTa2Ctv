@@ -5,11 +5,14 @@
     <link rel="stylesheet" type="text/css" href="examen.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="imgEjem/logo1.png">
+
 </head>
 <body>
 	<header class="header">
             <nav class="navCnt">
-                <a class="logo" href="#">Logo</a>
+                <a class="logo" href="#"><img class="imgllogo" src="imgEjem/logo1.png">LESSESTRES</a>
+
                 <button class="nav-toggle">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -67,6 +70,8 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="https://kit.fontawesome.com/a1580b1b63.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        
 
         <script type="text/javascript">
 
@@ -236,6 +241,27 @@
 
 
 
+            /////////////////////////////////////////////////////////////
+
+
+            window.sr = ScrollReveal();
+            sr.reveal('.nav-menu', {
+                duration: 2000,
+                origin: 'rigth',
+                distance: '200px'
+              });
+              sr.reveal('.imgllogo', {
+                duration: 3000,
+                rotate: {
+                    x:1,
+                    y:100,
+                }
+              });
+
+
+
+
         </script>
+
 </body>
 </html>
