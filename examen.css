@@ -158,7 +158,6 @@ border-radius: 10px;
 	.navCnt{
 	display: flex;
 	justify-content: space-between;
-	line-height: 50px;
 	}
 
 	.nav-menu{
@@ -193,6 +192,7 @@ border-radius: 10px;
 
 	.navCnt a{
 		color: #fff;
+		line-height: 20px;
 	}
 
 	.nav-toggle{
@@ -212,16 +212,15 @@ border-radius: 10px;
 	.nav-toggle:focus:not(:focus-visible){
 		outline: none;
 	}
-
 }
 
 
 
 
+
 .navCnt img{
-    position: absolute;
-    top: 10px;
-    left: 13%;
-    width: 50px;
-    height: 50px;
+    position: relative;
+    top: 5px;
+    width: 55px;
+    height: 55px;
 }

@@ -32,6 +32,14 @@ header{
 
 }
 
+
+.navCnt img{
+    position: relative;
+    top: 5px;
+    width: 50px;
+    height: 40px;
+}
+
 .nav-menu{
 	display: flex;
 	justify-content: space-around;
@@ -120,6 +128,7 @@ header{
 
 	.navCnt a{
 		color: #fff;
+		line-height: 20px;
 	}
 
 	.nav-toggle{
@@ -139,7 +148,9 @@ header{
 	.nav-toggle:focus:not(:focus-visible){
 		outline: none;
 	}
-
+	.navCnt img{
+		width: 100px;
+	}
 }
 
 
@@ -187,10 +198,10 @@ header{
   }
 }
 
+
 .navCnt img{
-    position: absolute;
-    top: 10px;
-    left: 13%;
-    width: 50px;
-    height: 50px;
+    position: relative;
+    top: 5px;
+    width: 55px;
+    height: 55px;
 }
