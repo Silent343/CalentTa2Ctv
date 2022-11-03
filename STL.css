@@ -472,6 +472,11 @@ a{
     .imgHidden{
     	display: none;
     }
+
+    .rain-cnt{
+        display: none;
+    }
+
 }
 
 

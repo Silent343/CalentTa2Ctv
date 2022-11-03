@@ -472,8 +472,9 @@ a{
         display: none;
     }
 
-
-
+    .rain-cnt{
+        display: none;
+    }
 
 }
 
