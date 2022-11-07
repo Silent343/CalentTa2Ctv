@@ -150,6 +150,9 @@ header{
 	.navCnt img{
 		width: 100px;
 	}
+	.book{
+		top: 50px!important
+	}
 }
 
 
