@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 }
 body{
+	font-family: sans-serif!important;
 	background: linear-gradient(#151728, #000, #151728);
 }
 
@@ -78,7 +79,7 @@ header{
 
 .btn-ejemp{
 	padding: 20px;
-	background: linear-gradient(to right,#16222A,#3A6073); 	
+	background: linear-gradient(to right,#0a3958,#3A6073); 	
 }
 .exmCnt{
 	display: flex;
@@ -92,7 +93,7 @@ header{
 	justify-content: space-around;
 	border-radius: 20px;
 	width: 70%;
-	background: #123;
+	background: rgb(6, 36, 65);
 	color: #999;
 }
 .frt-line::before{
@@ -106,6 +107,7 @@ header{
 	background: #545667;
 	color: #000;
 	text-align: center;
+	border-bottom: 3px solid #000;
 }
 
 

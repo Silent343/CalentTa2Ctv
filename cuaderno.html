@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="icon" href="imgEjem/logo1.png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 </head>
 <body>
@@ -34,19 +35,57 @@
 
 
         <div class="waves-cnt">
-<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g class="parallax">
-<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-</g>
-</svg>
-</div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+
+
+
+        <div class="cuaderno">
+            <div class="cuadn-ctn">
+                <h2>Cuadernos guardados</h2>
+                <span></span>
+                <ul class="Linecdn">
+                    <li class="animate__animated animate__rubberBand">History of modern art</li>
+                    <li><a class=seeCtn href="#" onclick="seeImg()">Ver</a></li>
+                </ul>
+                <span></span>
+                <ul class="Linecdn">
+                    <li class="animate__animated animate__rubberBand">Pancakes</li>
+                    <li><a class=seeCtn2 href="#" onclick="seeImg2()">Ver</a></li>
+                </ul>
+                <span></span>
+                <div class="addCtnr"><button class="addCdrn addbook">Agregar</button></div>
+            </div>
+        </div>
+
+
+
+        <div class="book book2" id="book">
+            <div class="bookCtn2">
+                <button class="btn-book addBook2"><span>Volver</span></button> 
+            </div>
+            <div class="bookElem">
+                <ul class="bookItems">
+                    <li><i class="fa-solid fa-pencil"></i></li>
+                    <li><i class="fa-solid fa-text-size"></i></li>
+                    <li><i class="fa-regular fa-image"></i></li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-solid fa-brush"></i></li>
+                </ul>
+                <span><img class="igmcdr" src="imgEjem/Cdrn45.jpeg"></span>
+            </div>
+        </div>
 
 
 
@@ -70,37 +109,67 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 navMenu.classList.toggle("navVisible")
             }) 
 
-            ///////////////alert
+            ///////////////////////////bookvisible&&invisible
 
+            const book = document.querySelector(".book")
+            const addBook = document.querySelector(".addbook")
 
-            Swal.fire({
-                title: 'Ojo!',
-                text: 'Pagina en desarrollo',
-                icon:'warning',
-                timer: 5500,
-                timerProgressBar: true,
-            })
+            addBook.addEventListener("click", () => {
+                book.classList.toggle("bookVisible")
+            }) 
+
+            const book2 = document.querySelector(".book2")
+            const addBook2 = document.querySelector(".addBook2")
+
+            addBook2.addEventListener("click", () => {
+                book2.classList.toggle("bookInvisible")
+            }) 
+            
+
+            
 
 ////////////////////////////////////////////////
 
-                window.sr = ScrollReveal();
-                        sr.reveal('.nav-menu', {
-                            duration: 2000,
-                            origin: 'rigth',
-                            distance: '200px'
-                          });
-                          sr.reveal('.imgllogo', {
-                            duration: 3000,
-                            rotate: {
-                                x:1,
-                                y:100,
-                            }
-                          });
+            window.sr = ScrollReveal();
+                    sr.reveal('.nav-menu', {
+                        duration: 2000,
+                        origin: 'rigth',
+                        distance: '200px'
+                        });
+                        sr.reveal('.imgllogo', {
+                        duration: 3000,
+                        rotate: {
+                            x:1,
+                            y:100,
+                        }
+                        });
 
       /////////////////////////////////////////cuaderno
-      
+             
+            function seeImg(){
+                Swal.fire({
+                title: 'Tarea de inglés',
+                text: "Pagina 1 >",
+                width: 700,
+                imageUrl: 'imgEjem/History.jpeg',
+                imageWidth: 600,
+                imageHeight: 700,
+                imageAlt: 'Custom image',
+                })
+            }
+            function seeImg2(){
+                Swal.fire({
+                title: 'Tarea de inglés',
+                text: "Pagina 1 >",
+                width: 700,
+                imageUrl: 'imgEjem/Wafle.jpeg',
+                imageWidth: 600,
+                imageHeight: 700,
+                imageAlt: 'Custom image',
+                })
+            }
 
-
+ 
       
 
 
