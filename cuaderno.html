@@ -84,8 +84,6 @@
                     <div class="front"><span class="title">History of moder Art</span></div>
                 </div>
 
-                
-
             </div>
 
             
@@ -101,6 +99,10 @@
                 <button class="btn-book " onclick="dis()"><span>Volver</span></button> 
             </div>
             <div class="bookElem">
+                <ul class="flexBtn3">
+                    <li><button onclick="addFond()">Escoger plantilla</button></li>
+                    <li><button onclick="addPlan()">Cambiar Fondo</button></li>
+                </ul>
                 <ul class="bookItems">
                     <li><i class="fa-solid fa-pencil" title="ESCRIBIR" onclick="addInT()"></i></li>
                     <li><i class="fa-solid fa-text-size" title=""></i></li>
@@ -220,6 +222,58 @@
 
 
             function addImbW() {
+
+            (async () => {   
+            // body...
+            const { value: file } = await Swal.fire({
+            title: 'Sube la imagen',
+            input: 'file',
+            inputAttributes: {
+            'accept': 'image/*',
+            'aria-label': 'Upload your profile picture'
+            }
+            })
+
+            if (file) {
+            const reader = new FileReader()
+            reader.onload = (e) => {
+            Swal.fire({
+                title: 'Descargado con éxito',
+                imageUrl: e.target.result,
+                imageAlt: 'The uploaded picture'
+            })
+            }
+            reader.readAsDataURL(file)
+            }})()
+            }
+
+            function addFond() {
+
+            (async () => {   
+            // body...
+            const { value: file } = await Swal.fire({
+            title: 'Sube la imagen',
+            input: 'file',
+            inputAttributes: {
+            'accept': 'image/*',
+            'aria-label': 'Upload your profile picture'
+            }
+            })
+
+            if (file) {
+            const reader = new FileReader()
+            reader.onload = (e) => {
+            Swal.fire({
+                title: 'Descargado con éxito',
+                imageUrl: e.target.result,
+                imageAlt: 'The uploaded picture'
+            })
+            }
+            reader.readAsDataURL(file)
+            }})()
+            }
+
+            function addPlan() {
 
             (async () => {   
             // body...

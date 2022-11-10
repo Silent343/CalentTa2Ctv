@@ -490,3 +490,26 @@ a{
     width: 55px;
     height: 55px;
 }
+
+
+.changeImg{
+	position: absolute;
+	margin-top: 20px;
+	padding: 5px;
+	border-radius: 10px;
+	background: #034574;
+	color: #faa;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.changeImg2{
+	position: absolute;
+	margin: 20px 0 0 200px;
+	padding: 5px;
+	border-radius: 10px;
+	background: #034574;
+	color: #faa;
+	text-transform: uppercase;
+	cursor: pointer;
+}
