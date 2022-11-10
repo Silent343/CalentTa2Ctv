@@ -54,36 +54,66 @@
         <div class="cuaderno">
             <div class="cuadn-ctn">
                 <h2>Cuadernos guardados</h2>
+
                 <span></span>
                 <ul class="Linecdn">
                     <li class="animate__animated animate__rubberBand">History of modern art</li>
                     <li><a class=seeCtn href="#" onclick="seeImg()">Ver</a></li>
                 </ul>
+                
                 <span></span>
                 <ul class="Linecdn">
                     <li class="animate__animated animate__rubberBand">Pancakes</li>
                     <li><a class=seeCtn2 href="#" onclick="seeImg2()">Ver</a></li>
                 </ul>
                 <span></span>
-                <div class="addCtnr"><button class="addCdrn addbook">Agregar</button></div>
+                <div class="addCtnr"><button class="addCdrn addbook" onclick="add()">Agregar</button></div>
+                <span></span>
+
+
+            <div class="book3Cnt">
+
+                <div class="book3">
+                    <div class="back"></div>
+                    <div class="page6"><img class="pagxd" src="imgEjem/History.jpeg"></div>
+                    <div class="page5"><span class="link" onclick="seeImg()"><p class="textRotate">Ver</p></span></div>
+                    <div class="page4"><img class="pagxd opaImg" src="imgEjem/History.jpeg"></div>
+                    <div class="page3"></div>
+                    <div class="page2"><img class="pagxd opaImg" src="imgEjem/History.jpeg"></div>
+                    <div class="page1"></div>
+                    <div class="front"><span class="title">History of moder Art</span></div>
+                </div>
+
+                
+
+            </div>
+
+            
+
+
             </div>
         </div>
 
 
 
-        <div class="book book2" id="book">
+        <div class="book " id="book">
             <div class="bookCtn2">
-                <button class="btn-book addBook2"><span>Volver</span></button> 
+                <button class="btn-book " onclick="dis()"><span>Volver</span></button> 
             </div>
             <div class="bookElem">
                 <ul class="bookItems">
-                    <li><i class="fa-solid fa-pencil"></i></li>
-                    <li><i class="fa-solid fa-text-size"></i></li>
-                    <li><i class="fa-regular fa-image"></i></li>
-                    <li><i class="fa-regular fa-comment"></i></li>
-                    <li><i class="fa-solid fa-brush"></i></li>
+                    <li><i class="fa-solid fa-pencil" title="ESCRIBIR" onclick="addInT()"></i></li>
+                    <li><i class="fa-solid fa-text-size" title=""></i></li>
+                    <li><i class="fa-regular fa-image" title="IMAGEN" onclick="addImbW()"></i></li>
+                    <li><i class="fa-regular fa-comment" title="GLOBO DE TEXTO"></i></li>
+                    <li><i class="fa-solid fa-brush" title="Pintar"></i></li>
+                    <input id="entrada" onkeyup="escribir2()" class="Inhidden">
                 </ul>
-                <span><img class="igmcdr" src="imgEjem/Cdrn45.jpeg"></span>
+                <div class="text_add">
+                    <img class="igmcdr" src="imgEjem/Cdrn45.jpeg" style="z-index: 35;">
+                    <div id="cont3" style="z-index: 50" class="canvaText"></div>
+                </div>
+                
             </div>
         </div>
 
@@ -99,6 +129,21 @@
 
         <script type="text/javascript">
 
+            //////////////////////////// inputText
+
+
+            
+            const inpText = document.querySelector(".Inhidden")
+
+            function addInT(){
+                inpText.classList.toggle("inpVisible")
+            }
+
+            //////// text
+                function escribir2() {
+                valor = document.getElementById('entrada').value;
+                document.getElementById('cont3').innerHTML=' '+valor;} 
+
             ////////////bars funtion
 
 
@@ -111,19 +156,18 @@
 
             ///////////////////////////bookvisible&&invisible
 
-            const book = document.querySelector(".book")
-            const addBook = document.querySelector(".addbook")
 
-            addBook.addEventListener("click", () => {
+            
+            
+            function add(){
                 book.classList.toggle("bookVisible")
-            }) 
+            }
 
-            const book2 = document.querySelector(".book2")
-            const addBook2 = document.querySelector(".addBook2")
+            function dis(){
+                book.classList.toggle("bookInvisible")
+            }
 
-            addBook2.addEventListener("click", () => {
-                book2.classList.toggle("bookInvisible")
-            }) 
+            
             
 
             
@@ -169,6 +213,37 @@
                 })
             }
 
+
+
+
+            //////////////////// add img
+
+
+            function addImbW() {
+
+            (async () => {   
+            // body...
+            const { value: file } = await Swal.fire({
+            title: 'Sube la imagen',
+            input: 'file',
+            inputAttributes: {
+            'accept': 'image/*',
+            'aria-label': 'Upload your profile picture'
+            }
+            })
+
+            if (file) {
+            const reader = new FileReader()
+            reader.onload = (e) => {
+            Swal.fire({
+                title: 'Descargado con éxito',
+                imageUrl: e.target.result,
+                imageAlt: 'The uploaded picture'
+            })
+            }
+            reader.readAsDataURL(file)
+            }})()
+            }
  
       
 

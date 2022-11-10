@@ -38,7 +38,7 @@
             <div class="Addbtn-cnt">
                 <h1>Tablero</h1><br>
                 <span>
-                    <button class="addThng" onclick="addFile()">Agregar</button></span>
+                    <button class="addThng" onclick="addFile()" title="Agregar imagen">Agregar</button></span>
             </div>
             <div class="dragArea">
                 <div>
@@ -121,7 +121,7 @@
               const reader = new FileReader()
               reader.onload = (e) => {
                 Swal.fire({
-                  title: 'Your uploaded picture',
+                  title: 'Descargado con éxito',
                   imageUrl: e.target.result,
                   imageAlt: 'The uploaded picture'
                 })
